@@ -1,0 +1,238 @@
+<div class="card" *ngFor="let data of dropDownData">
+    <div class="role-dropdown" >
+        <p>{{data.name}}
+            <img (click)="onClick(data.name)" class="expand-svg2" src="../../assets/icons_new/expand_more_black_24dp.svg" alt="">
+        </p>
+    </div>
+
+
+    <div class="toggle" id=p{{data.name}} *ngIf="data.type==0">
+        <div class="space-element"></div>
+        <div class="general instruction">
+            <p class="instruction-text">Gross Compensation Package :</p>
+            <p>Rs. {{data.data.compensation}} lpa</p>
+        </div>
+        <hr>
+        <div class="exam instruction" >
+            <p class="instruction-text">Role Description :</p>
+            <p>- Generate highly interactive and innovative instructional strategies for e-learning solutions <br>
+                - Develop course structure and learning specifications addressing the requirements of the target audience <br>
+                - Construct appropriate testing strategies to ensure learners' understanding and performance <br>
+                - Address usability issues - Keep abreast of new trends in e-learning <br>
+                - Ensure that the instructional strategies are as per global standards <br>
+                - Prepare instructional design checklists and guidelines <br>
+                - Check for quality assurance</p>
+        </div>
+        <hr>
+        <div class="min-requirement instruction">
+            <p class="instruction-text">Requirements :<br>
+            <p>- Experience in creating instructional plans and course maps. <br>
+                - Experience in the use of media like graphics, illustrations, photographs, audio, video, animations, and simulations in instruction <br>
+                - Awareness of different instructional design models and familiarity with instructional and learning theories <br>
+                - Awareness of latest trends in e-learning and instructional design <br>
+                - Strong client consulting/interfacing skills. <br>
+                - Ability to guide clients to focus on specific objectives and teaching points <br>
+                - Strong meeting facilitation, presentation and interpersonal skills <br>
+                - A thorough understanding of the web as an instructional medium <br>
+                - Post graduate degree in Education, Instructional Design, Mass Communication or Journalism</p>
+        </div>
+
+    </div>
+    <div class="space-element"></div>
+    <div class="toggle" id="p{{data.name}}" *ngIf="data.type==1">
+        <div class=" space-element"></div>
+        <div class="general instruction ">
+            <p class="instruction-text">General Instructions :</p>
+            <p>- We have a two–year indemnity for permanent candidates.
+                 We will provide training to the selected candidates.<br>
+            - Candidates who have appeared for any test held by Zeus Learning in the past 12 months
+                 will not be allowed to appear for this recruitment test.</p>
+        </div>
+        <hr class="">
+        <div class="exam instruction ">
+            <p class="instruction-text">Instructions for the Exam :</p>
+            <p>- Candidates are requested to log in half an hour prior to the exam start time as they
+                would need to capture their image using a web <br>
+            By taking this test, you are permitting the examination system to capture your video
+                 for invigilation <br>
+            - Candidates would not be able to appear for the exam if the web camera attached to
+                their system is not functional. <br>
+            - The web camera of your system must be enabled and must remain switched on throughout
+                 the examination.<br> In the event of non-receipt of a webcam, your examination will be
+                 considered null and void. <br>
+            - Candidate’s audio and video will be recorded during the examination and will also be
+                 monitored by a live proctor.<br> The proctor may terminate your exam in case he/she
+                 observes any malpractice during the exam. <br>
+            - Candidates are advised to use their own Laptop/PC with a stable internet connection
+                 (min 1 Mbps) during the exam.<br> - Candidates cannot use an iOS system/device for
+                 this exam.</p>
+        </div>
+        <hr class="">
+        <div class="min-requirement instruction ">
+            <p class="instruction-text">Minimum System Requirements :<br>
+            <p>- Personal Laptop or Desktop computer in working condition with good quality
+                camera (you can use Windows 7 and above). <br>
+            - The latest version of Google Chrome Browser only.<br>
+            - Please note that Internet speed should be minimum 1 Mbps. <br>
+            - Do not use a MacBook or iPad for the proctored exam.</p>
+        </div>
+        <hr class="">
+        <div class="process instruction ">
+            <p class="instruction-text">Process :</p>
+            <p>- Every round is an elimination round. Candidates need to clear all rounds to get selected.
+        
+            <div class="round">
+                <p>Round I : 4th August, 2018 </p>
+                <p>Aptitude Test : 25 Questions </p>
+            </div>
+            <div class="round">
+                <p>Round II (Interview) : 4th August, 2018.</p>
+            </div>
+        </div>
+    </div>
+    <div>
+        <div class="toggle" id=p{{data.name}} *ngIf="data.type==2">
+            <div class="input-field">
+                <label > Aggregate Percentage*</label>
+                <input type="text" value="65">
+            </div>
+            <div class="input-field">
+                <label > Year of Passing*</label>
+                <input type="text" value="2020">
+            </div>
+            <div class="block1">
+                <div class="input-field-1">
+                    <label > Qualification*</label>
+                    <input type="text" value="Bachelor in Technology (B.Tech)">
+                </div>
+                <div class="input-field-1">
+                    <label > Stream*</label>
+                    <input type="text" value="Information Technology">
+                </div>
+        
+            </div>
+            <div class="block2">
+                <div class="input-field-2">
+                    <label > College*</label>
+                    <input type="text" value="Pune Institute of Technology (PIT)">
+                </div>
+        
+                <div class="input-field-2">
+                    <label > If others, please enter your college name</label>
+                    <input type="text">
+                </div>
+        
+            </div>
+            <div class="input-field">
+                <label >Where is your college located?*</label>
+                <input type="text" value="Pune">
+            </div>
+        
+        </div>
+    </div>
+
+    <!-- <div class="container toggle" id=p{{data.name}} *ngIf="data.type==3"> -->
+        <div *ngIf="data.type==3">
+            <div class="toggle" id=p{{data.name}} >
+                <div class="input-field">
+                    <label >Applicant Type*</label>
+                    <div class="input-field-mixin">
+                        <label for=""></label>
+                        <label class="radio"><input type="radio" (click)="Box('fresher')" name="Applicant-type">Fresher</label>
+                        <label class="radio"><input type="radio" (click)="Box('experience')" name="Applicant-type">Experienced</label>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="toggle" id="experience">
+                <div class="input-field">
+                    <label>Years Of Experience*</label>
+                    <input type="text">
+                </div>
+                <div class="input-field">
+                    <label for="">Current CTC* (In Rupees)</label>
+                    <input type="text">
+                </div>
+                <div class="input-field">
+                    <label for="">Expected CTC* (In Rupees)</label>
+                    <input type="text">
+                </div>
+                <div class="input-field-mixin">
+                    <label for="">Select All the Technologies you expertise in *</label><br>
+                    <label class="checkbox"><input type="checkbox">JavaScript</label><br>
+                    <label class="checkbox"><input type="checkbox">Angular JS</label><br>
+                    <label class="checkbox"><input type="checkbox">React</label><br>
+                    <label class="checkbox"><input type="checkbox">Node JS</label><br>
+                    <label class="checkbox"><input type="checkbox">Others</label><br>
+                </div>
+                <div class="input-field">
+                    <label for="">If Others Please Mention</label>
+                    <input type="text">
+                </div>
+                <div class="input-field-mixin">
+                    <label for="">Select All the Technologies you are familiar in *</label><br>
+                    <label class="checkbox"><input type="checkbox">JavaScript</label><br>
+                    <label class="checkbox"><input type="checkbox">Angular JS</label><br>
+                    <label class="checkbox"><input type="checkbox">React</label><br>
+                    <label class="checkbox"><input type="checkbox">Node JS</label><br>
+                    <label class="checkbox"><input type="checkbox">Others</label><br>
+                </div>
+                <div class="input-field">
+                    <label for="">If Others Please Mention</label>
+                    <input type="text">
+                </div>
+                <div class="input-field-mixin">
+                    <label for="">Are you currently on Notice Period?*</label><br>
+                    <label class="radio"><input type="radio" name="NoticePeriod">Yes</label>
+                    <label class="radio"><input type="radio" name="NoticePeriod">No</label>
+                </div>
+                <div class="block1">
+                    <div class="input-field-1">
+                        <label for="">If Yes, when will your notice period end?*</label>
+                        <input type="text">
+                    </div>
+                    <div class="input-field-1">
+                        <label for="">How long is your notice period?* (Mention in months)</label>
+                        <input type="text">
+                    </div>
+                </div>
+                <div class="block1">
+                    <div class="input-field-mixin">
+                        <label for="">Have You Appeared For Any Test By Zeus in the past 12 months?*</label><br>
+                        <label class="radio"><input type="radio" name="AppearedExam">Yes</label>
+                        <label class="radio"><input type="radio" name="AppearedExam">No</label>
+                    </div>
+                </div>
+                <div class="block1">
+                    <div class="input-field-1">
+                        <label for="">If Yes, which role did you apply for?</label>
+                        <input type="text">
+                    </div>
+                </div>
+            </div>
+            <div class="toggle" id="fresher">
+                <div class="input-field-mixin">
+                    <label for="">Select All the Technologies you expertise in </label><br>
+                    <label class="checkbox"><input type="checkbox">JavaScript</label><br>
+                    <label class="checkbox"><input type="checkbox">Angular JS</label><br>
+                    <label class="checkbox"><input type="checkbox">React</label><br>
+                    <label class="checkbox"><input type="checkbox">Node JS</label><br>
+                    <label class="checkbox"><input type="checkbox">Others</label><br>
+                </div>
+                <div class="input-field">
+                    <label for="">If Others Please Mention</label>
+                    <input type="text">
+                </div>
+                <div class="block1">
+                    <div class="input-field-mixin">
+                        <label for="">Have You Appeared For Any Test By Zeus in the past 12 months?*</label><br>
+                        <label class="radio"><input type="radio" name="AppearedExam">Yes</label>
+                        <label class="radio"><input type="radio" name="AppearedExam">No</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+    <!-- </div> -->
+    
+    
+</div>

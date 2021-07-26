@@ -1,0 +1,92 @@
+
+<div class="cards-container" > 
+    
+        <div class="card">
+            <div class="card-text">
+                <p>Walk In for Multiple Job Roles {{ event_id }}</p>
+            </div>
+            <div class="date-time">
+                <p>Date & Time:</p>
+                <span class="date">10-Jul-2021 to 11-Jul-2021</span>
+                <span class="separator">|</span>
+                <span class="location"><img src="../../assets/icons/Location icon.svg" alt="location-icon">
+                    Mumbai
+                </span>
+            </div>
+            <hr>
+            <div class="job-roles">
+                <p>Job Roles:</p>
+                <div class="roles">
+                    <div>
+                        <span class="job-role-img"><img src="../../assets/icons/Instructional Designer.svg" alt=""></span>
+                        <span class="job-role-text">Instructional Designer</span>
+                    </div>
+                    <span class="separator">|</span>
+                    <div>
+                        <span class="job-role-img"><img src="../../assets/icons/Software Engineer.svg" alt=""></span>
+                        <span class="job-role-text">Software Engineer</span>
+                    </div>
+                    <span class="separator" >|</span>
+                    <div>
+                        <span class="job-role-img"><img src="../../assets/icons/Software Quality Engineer.svg" alt=""></span>
+                        <span class="job-role-text">Software Quality Engineer</span>
+                    </div>
+                </div>
+            </div> 
+            <div class="pre-requisite">
+                <p>Pre-requisites & Application Process
+                    <img (click)="showRequisite()" class="expand-svg1" src="../../assets/icons_new/expand_more_black_24dp.svg" alt="">
+                </p>
+            </div>
+            <app-pre-requisite></app-pre-requisite>
+         </div>
+        <div class="card time-slot-preference">
+            <p class="title">Time Slots & Preferences</p>
+            <div class="time-slot">
+                <p>Select a Time Slot:</p>
+                <label class="radio"><input type="radio">9:00 AM to 11:00 AM</label>
+                <label class="radio"><input type="radio">1:00 PM to 3:00 PM</label>
+            </div>
+            <hr>
+            <div class="space-element"></div>
+            <div class="preference">
+                <p>Select Your Preference :</p>
+                <label class="checkbox"><input type="checkbox">Instructional Designer</label>
+                <label class="checkbox"><input type="checkbox">Software Engineer</label>
+                <label class="checkbox"><input type="checkbox">Software Quality Engineer</label>
+            </div>
+            <hr>
+            <div class="resume">
+                <img src="../../assets/icons_new/Upload_black_24dp.svg" alt=""><p>UPLOAD UPDATED RESUME</p>
+            </div>
+        </div>
+        <app-role></app-role>
+
+        <!-- <div class="card">
+            <div class="role-dropdown">
+                <p>Instructional Designer
+                    <img (click)="showEngineerDescription()" class="expand-svg2" src="../../assets/icons_new/expand_more_black_24dp.svg" alt="">
+                </p>
+            </div>
+            <app-software-engineer-role-description></app-software-engineer-role-description>
+        </div>
+        <div class="card">
+            <div class="role-dropdown">
+                <p>Software Engineer
+                    <img (click)="showDesignerDescription()" class="expand-svg3" src="../../assets/icons_new/expand_more_black_24dp.svg" alt="">
+                </p>
+            </div>
+            <app-designer-role-description></app-designer-role-description>
+        </div>
+        <div class="card">
+            <div class="role-dropdown">
+                <p>Software Quality Engineer
+                    <img (click)="showQualityEngineerDescription()" class="expand-svg4" src="../../assets/icons_new/expand_more_black_24dp.svg" alt="">
+                </p>
+            </div>
+            <app-quality-engineer-role-description></app-quality-engineer-role-description>
+        </div> -->
+
+    
+<!-- </div> -->
+

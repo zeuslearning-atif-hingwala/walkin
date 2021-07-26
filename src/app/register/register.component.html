@@ -1,0 +1,78 @@
+<div class="create-account">
+    
+    <p>Create An Account</p>
+    <ul>
+        <li><button class="btn">CANCEL</button></li>
+        <li><button class="btn">CREATE</button></li>
+
+    </ul>
+    <div class="back"><img routerLink="/authentication" src="../../assets/icons_new/arrow-left-solid.svg" alt=""></div>
+</div>
+<div class="tabs" >
+    <div *ngFor="let i of data">
+        <div class="information" >
+            <a routerLink="/register" (click)="onClick(i.id)">
+                <div class="number" id={{i.id}}><p >{{i.id}}</p></div>
+                <p>{{i.name}}</p>
+            </a>
+        </div>
+    </div>
+    
+</div>
+<div *ngIf="active==1 || active==3">
+    <form (ngSubmit)="formSubmit(personal)" #personal="ngForm">
+        <div class="card" >
+            <div class="image">
+                <div class="img"><img src="../../assets/icons_new/account_circle_black_24dp.svg" alt=""></div>
+                <p>Upload Display Picture</p>
+                <p>Max. image size: 5 MB</p>
+            </div>
+            <div class="input-field">
+                <label for="f_name">First Name*</label><br>
+                <input ngModel required id="f_name" type="text" value="John" name="f_name">
+            </div>
+            <div class="input-field">
+                <label for="l_name">Last Name*</label><br>
+                <input ngModel required type="text" id="l_name" value="Watson" name="l_name">
+            </div>
+            <div class="input-field">
+                <label for="email">Email*</label><br>
+                <input ngModel required email type="text" value="Johnwatson@example.com" id="email" name="email">
+            </div>
+            <div class="input-field">
+                <label for="password">Password*</label><br>
+                <input ngModel required type="password" id="password" name="password" placeholder="Enter Password">
+            </div>
+            <div class="input-field">
+                <label for="phone_no">Phone Number*</label><br>
+                <input ngModel required type="text" id="phone_no" name="phone_no" value="+91 9876543210">
+            </div>
+            <div class="upload">
+                <img src="../../assets/icons_new/Upload_black_24dp.svg" alt=""><p>UPLOAD RESUME</p>
+            </div>
+            <div class="input-field">
+                <label for="url">Enter Portfolio URL (if any)*</label><br>
+                <input ngModel required type="text" id="url" name="url" value="www.myportfolio.in">
+            </div>
+            <div class="input-field">
+                <label for="checkbox">Preferred Job Roles*</label><br>
+                <label for="designer" class="checkbox"><input ngModel name="checkbox" id="designer" type="checkbox">Instructional Designer</label>
+                <label for="software" class="checkbox"><input ngModel name="checkbox" id="software" type="checkbox">Software Engineer</label>
+                <label for="quality" class="checkbox"><input ngModel name="checkbox" id="quality" type="checkbox">Software Quality Engineer</label>
+            </div>
+            <div class="input-field">
+                <label for="referral">If You Are Registering Via A Referral, Please Mention Full Name Of The Employee Who Referred You</label><br>
+                <input ngModel id="referral" name="referral" type="text">
+            </div>
+            <label for="updates" class="checkbox input-field"><input ngModel id="updates" name="updates" type="checkbox">Send me job related updates via mail</label>
+        </div>
+        <button type="submit" class="next-btn" *ngIf="active!=3">Next</button>
+    </form>
+</div>
+<div *ngIf="active==2 || active==3">
+    <app-dropdown [dropDownData]="dropDownData"></app-dropdown>
+    <div >
+        <button class="next-btn" (click)="onClick(3)" *ngIf="active!=3">Next</button>
+        <button class="next-btn" (click)="onClick(1)" >Previous</button>
+    </div>
+</div>

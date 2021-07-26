@@ -1,0 +1,207 @@
+// @import "../../event/event.component.scss";
+// @import "../../variables.scss";
+// @import "../../register/register.component.scss";
+
+// .card{
+//     @extend .card;
+//     // background-color:#EEEEEE;
+//     // margin-bottom: 30px;
+//     //  margin-top: 100px;
+//     .role-dropdown{
+//         @extend .role-dropdown;
+        
+//     }
+// }
+
+// // .toggle-designer{
+// //     display:none;
+    
+// // }
+
+// .toggle{
+//     display: none;
+    
+// }
+
+// .space-element{
+//     margin-bottom: 16px;
+// }
+
+
+
+// .instruction{
+//     color: #666666;
+//     font-size: 14px;
+//     // border: solid 1px red;
+//     .instruction-text{
+//         margin: unset;
+//         margin-bottom: 14px;
+//     }
+//     p:not(:first-child){
+//         color: #222222;
+//         font-weight: bold;
+//         font-size: 14px;
+//         // margin-bottom: 1px;
+//         margin-top: 0px;
+//         line-height: 24px;
+//     }
+//     .round{
+//         margin-top: 30px;
+//         margin-bottom: 30px;
+//         p{
+//             color: #222222;
+//             font-weight: bold;
+//             font-size: 14px;
+//             line-height: 10px;
+//         }
+//     }
+// }
+
+
+// .card{
+//     @extend .card;
+//     padding: 24px;
+//     margin-top: 100px;
+    
+//     .input-field{
+//         @extend .input-field;
+//         width: 180px;
+//         // border: solid 2px red;
+//         input[type= "text"]{
+//             width: 180px;
+//         }
+        
+//     }
+    
+//     .block1{
+//         display: flex;
+//         .input-field-1{
+//             height: fit-content;
+//             // display: grid;
+//             // grid-template-columns: 1fr 1fr;
+//             width: 450px;
+//             margin-right: 40px;
+//             // border: solid 2px red;
+//             margin-bottom: 45px;
+//             label:first-child{
+//                 font-size: 14px;
+//                 color: #666666;
+                
+//             }
+//             input[type="text"], input[type="email"], input[type="password"]{
+//                 border: none;
+//                 border-bottom: solid 1px #000000;
+//                 //opacity: 38%;
+//                 width: 450px;
+//                 margin-top: 10px;
+//                 font-weight: bold;
+                
+//                 font-size: 17px;
+
+//         }
+//     }
+// }
+//     .block2{
+//         @extend .block1;
+//         .input-field-2{
+//             @extend .input-field-1;
+//         }
+//     }
+
+// }
+
+@import "../../variables.scss";
+@import "../../event/event.component.scss";
+@import "../../register/register.component.scss";
+@import "../../mixin.scss";
+
+
+.toggle{
+    display: none;
+}
+
+.card{
+    @extend .card;
+    padding: 24px;
+    margin-top: 100px;
+    
+    .input-field{
+        @extend .input-field;
+        width: 180px;
+        // border: solid 2px red;
+        input[type= "text"]{
+            width: 180px;
+        }
+        
+    }
+
+    .input-field-mixin{
+        @extend .input-field;
+        
+        width: 452px;
+        .checkbox{
+            @extend .checkbox;
+        }
+        input[type="checkbox"]{
+            @extend .input-checkbox;
+        }
+        input[type="checkbox"]:checked{
+            @extend .input-checkbox-checked;
+            background-image: url(../../../assets/quantum_screen_assets/icons/checkbox-checked.svg);
+        }
+
+        .radio{
+            @extend .radio;
+        }
+        input[type="radio"]{
+            @extend .input-radio;
+
+        }
+        input[type="radio"]:checked{
+            @extend .input-radio-checked;
+            background-image: url(../../../assets/quantum_screen_assets/icons/icons8-unchecked-radio-button-24.png);
+        }
+    }
+    
+
+
+    .block1{
+        display: flex;
+        .input-field-1{
+            
+            height: fit-content;
+            // display: grid;
+            // grid-template-columns: 1fr 1fr;
+            width: 450px;
+            margin-right: 40px;
+            // border: solid 2px red;
+            margin-bottom: 45px;
+            label:first-child{
+                font-size: 14px;
+                color: #666666;
+                
+            }
+            input[type="text"], input[type="email"], input[type="password"]{
+                border: none;
+                border-bottom: solid 1px #000000;
+                //opacity: 38%;
+                width: 450px;
+                margin-top: 10px;
+                font-weight: bold;
+                
+                font-size: 17px;
+
+            }
+            input[type="checkbox"]{
+                @extend .checkbox;
+            }
+    }
+}
+    .block2{
+        @extend .block1;
+        .input-field-2{
+            @extend .input-field-1;
+        }
+    }
+
+}
